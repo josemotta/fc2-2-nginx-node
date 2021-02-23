@@ -2,7 +2,9 @@
 
 Desafio Nginx com Node.js
 
-### Comando
+Baseado em https://github.com/codeedu/fullcycle2.0-devops-docker
+
+### Get started
 
     git clone git@github.com:josemotta/fc2-2-nginx-node.git
     cd fc2-2-nginx-node
