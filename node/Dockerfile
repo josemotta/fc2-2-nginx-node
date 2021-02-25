@@ -3,14 +3,14 @@ FROM node:15
 WORKDIR /usr/src/app
 
 # Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# Copy both package.json & package-lock.json
 COPY package*.json ./
 RUN npm install
 
 # Bundle app source code
 COPY . .
 
-# Check files
+# Check files (debug)
 RUN ls -l
 RUN ls node_modules -l
 
