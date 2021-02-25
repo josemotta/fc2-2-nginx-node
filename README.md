@@ -17,15 +17,8 @@ Baseado em https://github.com/codeedu/fullcycle2.0-devops-docker
 
 ### Volumes
 
- Add a special volume to avoid error due to [node_modules missing after npm install[(https://stackoverflow.com/questions/30043872/docker-compose-node-modules-not-present-in-a-volume-after-npm-install-succeeds)
+ Add a volume to avoid error if [node_modules are missing after npm install](https://stackoverflow.com/questions/30043872/docker-compose-node-modules-not-present-in-a-volume-after-npm-install-succeeds)
 
-### Dockerize issue?
-
-#### Without Dockerize: no error
-nginx    | 172.21.0.1 - - [24/Feb/2021:20:31:56 +0000] "GET / HTTP/1.1" 200 418 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" "-"
-
-#### With Dockerize: error
-nginx    | 2021/02/24 20:21:05 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://172.21.0.3:3000/", host: "localhost:8080"
-nginx    | 172.21.0.1 - - [24/Feb/2021:20:21:05 +0000] "GET / HTTP/1.1" 502 575 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" "-"
-
-
+     volumes: 
+      - ./node:/usr/src/app
+      - /usr/src/app/node_modules
