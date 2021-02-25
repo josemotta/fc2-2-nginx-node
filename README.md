@@ -14,7 +14,12 @@ Baseado em https://github.com/codeedu/fullcycle2.0-devops-docker
 
 ![image](https://user-images.githubusercontent.com/86032/108916768-7dabde00-760d-11eb-85e2-ed0846f72db9.png)
 
-### Dockerize issue
+
+### Volumes
+
+ Add a special volume to avoid error due to [node_modules missing after npm install[(https://stackoverflow.com/questions/30043872/docker-compose-node-modules-not-present-in-a-volume-after-npm-install-succeeds)
+
+### Dockerize issue?
 
 #### Without Dockerize: no error
 nginx    | 172.21.0.1 - - [24/Feb/2021:20:31:56 +0000] "GET / HTTP/1.1" 200 418 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" "-"
