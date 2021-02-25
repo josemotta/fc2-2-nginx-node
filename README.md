@@ -17,7 +17,7 @@ Baseado em https://github.com/codeedu/fullcycle2.0-devops-docker
 
 ### Volumes
 
- Add a volume to avoid error if [node_modules are missing after npm install](https://stackoverflow.com/questions/30043872/docker-compose-node-modules-not-present-in-a-volume-after-npm-install-succeeds)
+ Adding a volume avoids error if [node_modules are missing after npm install](https://stackoverflow.com/questions/30043872/docker-compose-node-modules-not-present-in-a-volume-after-npm-install-succeeds).
 
      volumes: 
       - ./node:/usr/src/app
