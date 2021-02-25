@@ -1,9 +1,18 @@
 FROM node:15
 
 WORKDIR /usr/src/app
+
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+COPY package*.json ./
+RUN npm install
+
+# Bundle app source code
 COPY . .
-RUN npm init -y
-RUN npm install --save express mysql
+
+# Check files
+RUN ls -l
+RUN ls node_modules -l
 
 # RUN apt-get update && apt-get install -y wget
 
